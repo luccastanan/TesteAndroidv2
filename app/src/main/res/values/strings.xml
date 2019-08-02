@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Bank</string>
+    <string name="user">Usuário</string>
+    <string name="pass">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="input_email_or_cpf">Digite seu e-mail ou CPF</string>
+    <string name="input_pass">Digite sua senha</string>
 </resources>
