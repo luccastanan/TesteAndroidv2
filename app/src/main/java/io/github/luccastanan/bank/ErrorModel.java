@@ -8,6 +8,14 @@ public class ErrorModel implements Parcelable {
     String message;
 
     @Override
+    public String toString() {
+        return "{ code: " + code + ", message: \"message\": " + message + " }";
+    }
+
+    public ErrorModel() {
+    }
+
+    @Override
     public int describeContents() {
         return 0;
     }
@@ -18,15 +26,12 @@ public class ErrorModel implements Parcelable {
         dest.writeString(this.message);
     }
 
-    public ErrorModel() {
-    }
-
     protected ErrorModel(Parcel in) {
         this.code = in.readInt();
         this.message = in.readString();
     }
 
-    public static final Parcelable.Creator<ErrorModel> CREATOR = new Parcelable.Creator<ErrorModel>() {
+    public static final Creator<ErrorModel> CREATOR = new Creator<ErrorModel>() {
         @Override
         public ErrorModel createFromParcel(Parcel source) {
             return new ErrorModel(source);
