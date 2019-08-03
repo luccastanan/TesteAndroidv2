@@ -1,4 +1,4 @@
-package io.github.luccastanan.bank;
+package io.github.luccastanan.bank.loginScreen;
 
 import java.lang.ref.WeakReference;
 
