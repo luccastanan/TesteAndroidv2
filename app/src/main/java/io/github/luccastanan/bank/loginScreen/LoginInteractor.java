@@ -9,7 +9,6 @@ interface LoginInteractorInput {
 interface LoginInteractorCallback {
     void onSuccess(UserAccountModel userAccount);
     void onError(ErrorModel error);
-
 }
 
 public class LoginInteractor implements LoginInteractorInput, LoginInteractorCallback {

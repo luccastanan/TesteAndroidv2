@@ -3,6 +3,8 @@ package io.github.luccastanan.bank.loginScreen;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.Locale;
+
 public class UserAccountModel implements Parcelable {
 
     public int userId;
@@ -10,6 +12,11 @@ public class UserAccountModel implements Parcelable {
     public String bankAccount;
     public String agency;
     public double balance;
+
+    @Override
+    public String toString() {
+        return String.format(Locale.getDefault(), "{ userId: %s, name: \"%s\", bankAccount: \"%s\", agency: \"%s\", balance: %f }", userId, name, bankAccount, agency, balance);
+    }
 
     public UserAccountModel() {
     }

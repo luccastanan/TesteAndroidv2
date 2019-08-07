@@ -1,7 +1,5 @@
 package io.github.luccastanan.bank.loginScreen;
 
-import android.util.Log;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -9,7 +7,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -30,7 +27,7 @@ public class UserAccountWorker implements UserAccountWorkerInput {
     @Override
     public void doLogin(final String user, final String password, final LoginInteractorCallback callback) {
 
-        StringRequest strReq = new StringRequest(Request.Method.POST, Constants.LOGIN_URL, new Response.Listener<String>() {
+        StringRequest strReq = new StringRequest(Request.Method.POST, Constants.URL_LOGIN, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {

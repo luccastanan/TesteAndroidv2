@@ -5,4 +5,14 @@
     <string name="login">Entrar</string>
     <string name="input_email_or_cpf">Digite seu e-mail ou CPF</string>
     <string name="input_pass">Digite sua senha</string>
+    <string name="recents">Recentes</string>
+    <string name="label_value">R$%,.2f</string>
+    <string name="label_account">%s / %s</string>
+    <string name="accout">Conta</string>
+    <string name="balance">Saldo</string>
+    <string name="logout">Sair</string>
+    <string name="back_to_exit">Pressione novamente se deseja sair</string>
+    <string name="error_enter_user">Digite seu e-mail ou CPF</string>
+    <string name="error_invalid_user">Usuário inválido</string>
+    <string name="error_enter_pass">Digite sua senha</string>
 </resources>

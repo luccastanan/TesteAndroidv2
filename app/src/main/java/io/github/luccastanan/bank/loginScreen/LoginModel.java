@@ -4,7 +4,12 @@ public class LoginModel {
 }
 
 class LoginViewModel {
-    UserAccountViewModel userAccount;
+    UserAccountViewModel userAccountVM;
+
+    @Override
+    public String toString() {
+        return userAccountVM.toString();
+    }
 }
 
 class LoginRequest {

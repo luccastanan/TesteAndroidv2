@@ -1,5 +1,7 @@
 package io.github.luccastanan.bank.loginScreen;
 
+import android.util.Log;
+
 import java.lang.ref.WeakReference;
 
 interface LoginPresenterInput {
@@ -15,6 +17,8 @@ public class LoginPresenter implements LoginPresenterInput {
 
     @Override
     public void presentLoginData(LoginResponse response) {
+        Log.w(TAG, "presentHomeData() called with: response = " + response.toString());
+
         LoginViewModel loginVM = new LoginViewModel();
         UserAccountViewModel userAccountVM = new UserAccountViewModel();
         userAccountVM.userId = response.userAccount.userId;
@@ -22,9 +26,8 @@ public class LoginPresenter implements LoginPresenterInput {
         userAccountVM.bankAccount = response.userAccount.bankAccount;
         userAccountVM.agency = response.userAccount.agency;
         userAccountVM.balance = response.userAccount.balance;
-        loginVM.userAccount = userAccountVM;
+
+        loginVM.userAccountVM = userAccountVM;
         output.get().displayLoginData(loginVM);
     }
-
-
 }
